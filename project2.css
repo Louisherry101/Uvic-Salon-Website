@@ -1,0 +1,75 @@
+body{
+  background-color: pink;
+
+
+
+}
+.checkbox {
+  padding: 20px;
+  border: 2px solid lightgray;
+  margin: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h1{
+  font-family: Fantasy;
+  font-size: 50;
+}
+p{
+  font-family: helvetica, sans-serif
+}
+#header1 {
+  padding-top: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+.result{
+  text-align: center;
+}
+.salonphoto{
+  width:300px;
+  height:200px;
+  position: absolute;
+  left:230;
+  top:220px;
+}
+.salonphoto2{
+  width:300px;
+  height:200px;
+  position: absolute;
+  right:230;
+  top:220px;
+}
+
+#mapper{
+  text-align: center;
+}
+@media all and (max-width:800px){
+
+	body{
+	
+
+	justify-content: space-around;
+	}
+
+}
+
+
+@media all and (max-width:600px){
+	.button {
+        display:flex;
+        flex-direction: column;
+    }
+  .checkbox {
+  
+        text-align: left;
+    }
+
+  .salonphoto{
+        display:none;
+  }
+  .salonphoto2{
+    display:none;
+}
+
+}

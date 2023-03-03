@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <link href="project2.css" type="text/css" rel="stylesheet">
+        <script src="project2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
+    </head>
+    <body>
+        <div id="header1">
+            <h1>Salon Checker </h1>
+            <p>
+                this website is for you to check the best pricing salon 
+            </p><br>
+            <p>
+                follow the instructions below and pick what service you want
+            </p>
+
+        </div>
+
+        <div class="checkbox">
+            <h4><b>What style do you want<br></b>   </h4>
+                <form >
+                    <input type="checkbox" name="haircut" value="Mans Cut" id="c1"> Mans Cut<br>
+                    <input type="checkbox" name="haircut" value="Female's Cut" id="c2"> Female's Cut<br>
+                    <input type="checkbox" name="haircut" value=" Perm" id="c3"> Perm<br>
+                    <input type="checkbox" name="haircut" value="Dyeing" id="c4"> Dyeing<br>
+                    <input type="checkbox" name="haircut" value="Highlight*****" id="c5"> Highlight<br>
+              
+                    <button class="button" type="button" onclick="calculate_best_price()"id="button">Check the best Price</button>
+                    <button class="button" type="button" onclick="refresh()">Reset</button> 
+                </form> 
+
+                <img class="salonphoto" src="https://images.squarespace-cdn.com/content/v1/5b06f6ec75f9eeaa10c4b0f5/1535397258150-V8IHN60655T9SUJFSUR9/double_image.gif?format=2500w" >
+                <img class="salonphoto2" src="https://images.squarespace-cdn.com/content/v1/5e4ccbf4767d493566246e62/1608175953694-NTXA05HGMF0XO0V36DSB/Main-Page.jpg?format=2500w">
+        </div>
+   
+
+
+
+        <div class= "result">
+       <div id="output">
+    
+       </div>
+       <div id="address">
+
+       </div>
+       <div id="telno">
+
+       </div>
+       
+       <div id="mapper">
+
+       <div id="map1"  style="display:none;" >
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.2925195352077!2d-123.33625238410157!3d48.47010247925137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f73c7058054a7%3A0xe70cd18350001cd0!2sHANA%20HAIR%20%26%20BEAUTY!5e0!3m2!1szh-TW!2sca!4v1654818590120!5m2!1szh-TW!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> 
+       </div>
+
+       <div id="map2"  style="display:none;" >
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d336223.5879907642!2d-123.52117843784907!3d48.824892683131566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f716268f12901%3A0x25a2e5b471656f1d!2sCopa%20Hair%20Studio!5e0!3m2!1szh-TW!2sca!4v1654818862452!5m2!1szh-TW!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+        </div>
+
+      
+       <div id="map3"  style="display:none;" >
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2647.3634743026805!2d-123.34700338410273!3d48.43036337924779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f74634f4710f1%3A0x6d1b3eaa732f34e5!2sStudio%201313%20Hair%20Design!5e0!3m2!1szh-TW!2sca!4v1654818935673!5m2!1szh-TW!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p> 
+        </div>
+
+    
+       <div id="map4"  style="display:none;" >
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2646.5417037407406!2d-123.33809688410226!3d48.44613507924928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f74755e3f7243%3A0x2e610f84d506d25d!2sBella-Moda%20Hair%20Studio!5e0!3m2!1szh-TW!2sca!4v1654818955050!5m2!1szh-TW!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+         </div>
+
+       <div id="map5"  style="display:none;" >
+        <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2647.0097066989647!2d-123.36031708410248!3d48.43715347924842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548f747f91e5956d%3A0xe809ee367259d1f!2sAkai%20Hair%20Design%20inc.!5e0!3m2!1szh-TW!2sca!4v1654818981408!5m2!1szh-TW!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+     
+
+        </div>
+       
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
